@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Shahrier Jaman</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Custom CSS -->
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #1E1E1E;
+      color: #E0E0E0;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      color: #CFC6D5;
+    }
+
+    a {
+      color: #CFC6D5;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #B8AFC0;
+    }
+
+    /* Project Details Section */
+    #project-details {
+      padding: 100px 0;
+      opacity: 0; /* Start hidden for fade-in effect */
+    }
+
+    .project-details-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .project-details-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      opacity: 0; /* Start hidden for fade-in effect */
+    }
+
+    .project-details-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #CFC6D5;
+      opacity: 0; /* Start hidden for fade-in effect */
+    }
+
+    .project-details-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #E0E0E0;
+      opacity: 0; /* Start hidden for fade-in effect */
+    }
+
+    .project-details-content h3 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #CFC6D5;
+    }
+
+    .project-details-content p {
+      margin-bottom: 20px;
+    }
+
+    .project-details-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .project-details-content img:hover {
+      transform: scale(1.05);
+    }
+
+    .ui-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .ui-images img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .ui-images img:hover {
+      transform: scale(1.1);
+    }
+
+    .get-code-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #CFC6D5;
+      color: #121212;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .get-code-btn:hover {
+      background-color: #B8AFC0;
+      color: #000522;
+      transform: translateY(-3px);
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Animation Classes */
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .animate-scaleIn {
+      animation: scaleIn 1s ease-out forwards;
+    }
+
+    /* Delayed Animations */
+    .delay-1 {
+      animation-delay: 0.5s;
+    }
+
+    .delay-2 {
+      animation-delay: 1s;
+    }
+
+    .delay-3 {
+      animation-delay: 1.5s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Sabit.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blogs.html">Blog</a>
+                </li>
+              </ul>
+          <a href="contact.html" class="btn btn-outline-light ms-3"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+  <section id="project-details">
+    <div class="project-details-container">
+      <img src="img/p1.jpeg" alt="Project Image" class="project-details-img">
+      <h1 class="project-details-title">Project Title</h1>
+      <div class="project-details-content">
+        <h3>Language & Libraries</h3>
+        <p>This project was built using <strong>Python</strong> and <strong>Django</strong> for the backend, and <strong>React</strong> for the frontend. Additional libraries include <strong>Pandas</strong> for data manipulation and <strong>Chart.js</strong> for data visualization.</p>
+
+        <h3>Function Definition</h3>
+        <p>The primary function of this project is to provide a user-friendly interface for managing and analyzing large datasets. It includes features like data filtering, sorting, and visualization, all accessible through an intuitive dashboard.</p>
+
+        <h3>User Interface</h3>
+        <p>The user interface is designed to be clean and minimalistic, with a focus on usability. Below are some screenshots of the UI:</p>
+        <div class="ui-images">
+          <img src="img/pr1.png" alt="UI Image 1">
+          <img src="img/pr2.png" alt="UI Image 2">
+          <img src="img/pr3.png" alt="UI Image 3">
+        </div>
+
+        <!-- Get Code Button -->
+        <a href="#" class="get-code-btn">Get the Code <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="fs-5">Let's build something amazing together!</p>
+      <div class="social-links">
+        <a href="https://github.com/shahrierjaman" class="text-white me-3"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shahrier-jaman-sabit/" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="mt-3">&copy; 2025 Shahrier Jaman. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS for Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const projectDetailsSection = document.getElementById("project-details");
+      const projectImage = document.querySelector(".project-details-img");
+      const projectTitle = document.querySelector(".project-details-title");
+      const projectContent = document.querySelector(".project-details-content");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.2, // Trigger when 20% of the element is visible
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Fade in the project details section
+            projectDetailsSection.style.opacity = "1";
+            projectDetailsSection.classList.add("animate-fadeIn");
+
+            // Animate the project image
+            projectImage.style.opacity = "1";
+            projectImage.classList.add("animate-scaleIn");
+
+            // Animate the project title
+            projectTitle.style.opacity = "1";
+            projectTitle.classList.add("animate-fadeInUp");
+
+            // Animate the project content
+            projectContent.style.opacity = "1";
+            projectContent.classList.add("animate-fadeInUp", "delay-1");
+
+            // Stop observing after animations are triggered
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      observer.observe(projectDetailsSection);
+    });
+  </script>
+</body>
+</html>
